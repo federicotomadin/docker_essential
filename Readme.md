@@ -1,75 +1,87 @@
-                           ***********  DOCKER  ********** 
+# DOCKER
 
+**_Download docker desktop_**
+https://www.docker.com/products/docker-desktop/
 
-**_Download docker desktop_** 
-https://www.docker.com/products/docker-desktop/ 
-
-_**Docker Hub**_ 
-https://hub.docker.com/ 
+_**Docker Hub**_
+https://hub.docker.com/
 
 Download image
+
 ```sh
-docker pull 
+docker pull
 ```
 
-Docker run tambien hace un pull si no tenés la imagen descargada 
+Docker run tambien hace un pull si no tenés la imagen descargada
+
 ```sh
 docker run
 ```
 
 Listar las imagenes locales
+
 ```sh
-docker images | head 
+docker images | head
 ```
+
 Contenedores corriendo ahora
+
 ```sh
-docker ps 
+docker ps
 ```
-Historial de contenedores que corrieron 
+
+Historial de contenedores que corrieron
+
 ```sh
 docker ps -a
 ```
 
-## LOGS 
+## LOGS
+
 _-f: logs tiempo real_
+
 ```sh
 docker logs <name_container>
 docker logs -f <name_container>
 ```
 
-## EXEC 
-Ejecuta un comando dentro del contenedor que esta corriendo 
+## EXEC
 
-_i:  interactivo
-t:  terminal
+Ejecuta un comando dentro del contenedor que esta corriendo
+
+_i: interactivo
+t: terminal
 sh: shell_
 
 ```sh
-docker exec 
+docker exec
 docker exec it sh
 ```
 
-## START and STOP 
+## START and STOP
 
 ```sh
 docker start <conteiner_id>
 docker sotp <conteiner_id>
 ```
 
-## BUILD and RUN 
+## BUILD and RUN
 
-t: tag 
+t: tag
+
 ```sh
-docker build -t <name_image> 
+docker build -t <name_image>
 ```
 
-_d: ditach_  -> significa que corre en background
+_d: ditach_ -> significa que corre en background
+
 ```sh
-docker run -d nginx 
+docker run -d nginx
 ```
 
-_p:  port 
-d:   ditach_
+_p: port
+d: ditach_
+
 ```sh
-docker run -dp 3000:3000 <name_image> 
+docker run -dp 3000:3000 <name_image>
 ```
