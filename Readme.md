@@ -1,10 +1,13 @@
-# DOCKER
+                           ***********  DOCKER  **********
 
 **_Download docker desktop_**
 https://www.docker.com/products/docker-desktop/
 
 _**Docker Hub**_
 https://hub.docker.com/
+
+_**Documentation**_
+https://docs.docker.com/
 
 Download image
 
@@ -67,7 +70,7 @@ docker sotp <conteiner_id>
 
 ## BUILD and RUN
 
-t: tag
+_t: tag_
 
 ```sh
 docker build -t <name_image>
@@ -84,4 +87,10 @@ d: ditach_
 
 ```sh
 docker run -dp 3000:3000 <name_image>
+```
+
+## DOCKER HUB
+
+```sh
+docker login
 ```
