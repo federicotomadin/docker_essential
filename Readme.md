@@ -58,7 +58,7 @@ sh: shell_
 
 ```sh
 docker exec
-docker exec it sh
+docker exec -it <imageId> sh
 ```
 
 ## START and STOP
@@ -94,3 +94,55 @@ docker run -dp 3000:3000 <name_image>
 ```sh
 docker login
 ```
+
+# INSTALL DOCKER EN WSL 2
+
+## Uninstall previous versions
+
+```sh
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+```sh
+sudo apt-get update
+```
+
+## Install Docker Engine
+
+```sh
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+```
+
+```sh
+sudo mkdir -p /etc/apt/keyrings
+```
+
+```sh
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg
+```
+
+```sh
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+```sh
+sudo apt-get update
+```
+
+```sh
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+```sh
+sudo service docker start
+```
+
+## Correct settings in Docker Desktop
+
+![image.png](/.attachments/image-bc4aa844-02e6-4946-8789-9d2ade5e5b73.png)
