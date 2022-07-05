@@ -1,5 +1,9 @@
                            ***********  DOCKER  **********
 
+## INSTALL DOCKER
+
+---
+
 **_Download docker desktop_**
 https://www.docker.com/products/docker-desktop/
 
@@ -73,7 +77,7 @@ docker sotp <conteiner_id>
 _t: tag_
 
 ```sh
-docker build -t <name_image>
+docker build -t <hub>/<name_image>:<tag> .
 ```
 
 _d: ditach_ -> significa que corre en background
@@ -93,6 +97,19 @@ docker run -dp 3000:3000 <name_image>
 
 ```sh
 docker login
+```
+
+## PUSH and PULL
+
+```sh
+docker push <image>:<tag>
+docker pull <image>:<tag>
+```
+
+## DOCKER-COMPOSE
+
+```sh
+docker-compose up -d
 ```
 
 # INSTALL DOCKER EN WSL 2
